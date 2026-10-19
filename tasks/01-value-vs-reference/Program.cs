@@ -25,9 +25,20 @@ class Program
         d.Amount = 999m;
 
         Console.WriteLine($"""
-            Struct: 
+            Class: 
             c = {c.Amount}
             d = {d.Amount}
             """);
+
+        var e = new OrderClass { Amount = 100m };
+        var f = e;
+        e = new OrderClass { Amount = 50m };
+        Console.WriteLine($"""
+                Class: 
+                e = {e.Amount}
+                f = {f.Amount}
+                """);
+
+
     }
 }

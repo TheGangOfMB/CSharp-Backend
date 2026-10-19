@@ -14,11 +14,18 @@ Struct:
 	то вывод будет: а = 50, и b = 100
 
 Class:
-	a = 100;
-	b = a;
-	a = 50;
+	var a = new OrderClass { Amount = 100m };
+	var b = a;
+	b.Amount = 50m;
 
 	то вывод будет: а = 50, и b = 50
+
+Class:
+	var a = new OrderClass { Amount = 100m };
+	var b = a;
+	a = new OrderClass { Amount = 50m };
+
+	то вывод будет: a = 50, и b = 100
 
 ==============================================================================
 
